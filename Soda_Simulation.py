@@ -135,6 +135,3 @@ if st.button("Run Simulation"):
     sim.run()
     sim.plot()
     sim.export_to_csv()
-sim.run()
-sim.plot()
-sim.export_to_csv()
