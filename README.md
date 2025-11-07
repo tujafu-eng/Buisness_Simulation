@@ -1,4 +1,4 @@
-# 🧃 Soda Market Simulation
+#Soda Market Simulation
 
 **Author:** Tucker Fuller  
 **Tech Stack:** Python · Streamlit · Pandas · Matplotlib  
