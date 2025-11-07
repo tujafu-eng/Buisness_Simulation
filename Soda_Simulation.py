@@ -3,7 +3,6 @@ import random
 import matplotlib.pyplot as plt
 import csv as cs
 
-
 class Factory:
     def __init__(self, growth=1, water_cost=0.05, sugar_cost=0.25, glass_cost=0.50):
         self.growth = growth
@@ -126,13 +125,7 @@ class Simulation:
 
 
 # ---- Run the simulation ----
-import streamlit as st
-
-years = st.number_input("How many years to simulate?", min_value=1, max_value=100, value=3, step=1)
-growth_rate = st.number_input("Enter growth rate (e.g. 0.05):", min_value=0.0, max_value=1.0, value=0.05, step=0.01)
-
-if st.button("Run Simulation"):
-    sim = Simulation(years=int(years), growth_rate=float(growth_rate))
-    sim.run()
-    sim.plot()
-    sim.export_to_csv()
+sim = Simulation(years=int(input("How many years to simulate? ")), growth_rate=float(input("Enter growth rate (e.g. 0.05): ")))
+sim.run()
+sim.plot()
+sim.export_to_csv()
