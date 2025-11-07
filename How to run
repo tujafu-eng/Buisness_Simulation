@@ -1,0 +1,3 @@
+#In Powershell terminal run these 2 commands if all dependencies are installed
+#cd <File Location>
+# streamlit run Soda_Simulation
