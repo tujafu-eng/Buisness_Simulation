@@ -125,7 +125,13 @@ class Simulation:
 
 
 # ---- Run the simulation ----
-sim = Simulation(years=st.number_input("How many years to simulate? ")), growth_rate=st.number_input("Enter growth rate (e.g. 0.05): ")
+# Get user input
+years = st.number_input("How many years to simulate?", min_value=1, max_value=50, value=5, step=1)
+growth_rate = st.number_input("Enter growth rate (e.g. 0.05):", min_value=0.0, max_value=1.0, value=0.05, step=0.01)
+
+# Initialize Simulation correctly
+sim = Simulation(years=int(years), growth_rate=float(growth_rate))
+
 sim.run()
 sim.plot()
 sim.export_to_csv()
